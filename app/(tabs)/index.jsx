@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { useNavigation } from 'expo-router'; // Gunakan useNavigation dari expo-router
+import { useNavigation } from 'expo-router';
 
 const index = () => {
-  const navigation = useNavigation(); // Menggunakan hook untuk mendapatkan akses ke navigasi
+  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
@@ -19,18 +19,17 @@ const index = () => {
       </View>
 
       <View style={styles.buttonContainer}>
-        {/* Button ke List Data */}
+
         <TouchableOpacity 
           style={styles.button} 
-          onPress={() => navigation.navigate('listdata')} // Navigasi ke ListData
+          onPress={() => navigation.navigate('listdata')} 
         >
           <Text style={styles.buttonText}>Ke List Data</Text>
         </TouchableOpacity>
 
-        {/* Button ke Profile */}
         <TouchableOpacity 
           style={styles.button} 
-          onPress={() => navigation.navigate('profile')} // Navigasi ke Profile
+          onPress={() => navigation.navigate('profile')} 
         >
           <Text style={styles.buttonText}>Ke Profile</Text>
         </TouchableOpacity>

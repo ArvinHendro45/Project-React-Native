@@ -13,10 +13,10 @@ const Listdata = ({ navigation }) => {
       try {
         const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
         setData(response.data);
-        setLoading(false); // Set loading selesai saat data diterima
+        setLoading(false); 
       } catch (error) {
         console.error('Error fetching data:', error);
-        setLoading(false); // Set loading selesai jika ada error
+        setLoading(false); 
       }
     };
     fetchData();
